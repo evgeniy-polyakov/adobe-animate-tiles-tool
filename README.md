@@ -18,7 +18,7 @@ Mac OS® X:
 * Select the tool in the Toolbar.
 * Select the `Properties > Tool` panel. Set the origin position and size of the tile you want to draw:\
 ![img.png](img/tool.png)
-* Select any of symbol in the library that will be used as a tile.
+* Select a symbol in the library that will be used as a tile.
 * Draw tiles on the stage. Click to place a single tile, drag to draw multiple tiles.\
 If other symbols are on the same layer they will be replaced with the selected tile in the drawn region.\
 Tile position will be calculated using origin position and tile size from the tool options.
