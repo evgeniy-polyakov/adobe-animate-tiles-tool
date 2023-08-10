@@ -1,0 +1,8 @@
+<properties>
+    <property name="Origin X: " variable="originX" defaultValue="0" type="Number" min="-10000" max="10000"/>
+    <property name="Origin Y: " variable="originY" defaultValue="0" type="Number" min="-10000" max="10000"/>
+    <property name="Tile Width: " variable="tileWidth" defaultValue="100" type="Number" min="0" max="10000"/>
+    <property name="Tile Height: " variable="tileHeight" defaultValue="100" type="Number" min="0" max="10000"/>
+</properties>
+
+
