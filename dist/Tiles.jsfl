@@ -83,31 +83,33 @@ function mouseUp() {
                 }
             }
         }
+        startPosition = undefined;
+        endPosition = undefined;
         if (newTilePositions.length > 0) {
             // Add item is very costly operation (up to 20ms), that's why the item is created once and then copied
             doc.addItem(centerPoint, tileItem);
-            var tiles = [doc.selection[0]];
-            while (tiles.length < newTilePositions.length * 0.5) {
-                doc.selection = tiles;
-                doc.duplicateSelection();
-                tiles = tiles.concat(doc.selection);
+            if (doc.selection.length === 1) {
+                var tiles = [doc.selection[0]];
+                while (tiles.length < newTilePositions.length * 0.5) {
+                    doc.selection = tiles;
+                    doc.duplicateSelection();
+                    tiles = tiles.concat(doc.selection);
+                    doc.selectNone();
+                }
+                if (tiles.length < newTilePositions.length) {
+                    doc.selection = tiles.slice(0, newTilePositions.length - tiles.length);
+                    doc.duplicateSelection();
+                    tiles = tiles.concat(doc.selection);
+                    doc.selectNone();
+                }
+                for (var i = 0; i < tiles.length; i++) {
+                    tiles[i].x = newTilePositions[i].x;
+                    tiles[i].y = newTilePositions[i].y;
+                }
+                doc.selectAll();
                 doc.selectNone();
-            }
-            if (tiles.length < newTilePositions.length) {
-                doc.selection = tiles.slice(0, newTilePositions.length - tiles.length);
-                doc.duplicateSelection();
-                tiles = tiles.concat(doc.selection);
-                doc.selectNone();
-            }
-            for (var i = 0; i < tiles.length; i++) {
-                tiles[i].x = newTilePositions[i].x;
-                tiles[i].y = newTilePositions[i].y;
             }
         }
-        doc.selectAll();
-        doc.selectNone();
-        startPosition = undefined;
-        endPosition = undefined;
     }
 }
 
