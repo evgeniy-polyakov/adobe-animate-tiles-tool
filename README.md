@@ -4,9 +4,9 @@ The tool for Adobe Animate that allows to quickly place symbols as tiles.
 ## Installation
 * Copy the contents of `/dist` folder into the tools directory:\
 Windows® 10™:
-`boot drive\Users\username\AppData\Local\Adobe\Animate&nbsp;version\language\Configuration\Tools`\
+`boot drive\Users\username\AppData\Local\Adobe\Animate version\language\Configuration\Tools`\
 Mac OS® X:
-`Macintosh&nbsp;HD/Users/username/Library/Application&nbsp;Support/Adobe/Animate&nbsp;version/language/Configuration/Tools`
+`Macintosh HD/Users/username/Library/Application Support/Adobe/Animate version/language/Configuration/Tools`
 
 * Launch Adobe Animate
 
